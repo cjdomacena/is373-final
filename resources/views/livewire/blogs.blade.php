@@ -36,7 +36,7 @@
 
                     <tr>
                         <td class="border px-4 py-2">{{ $blog->title }}</td>
-                        <td class="border px-4 py-2">{{ $blog->body }}</td>
+                        <td class="border px-4 py-2 truncate">{{ $blog->body }}</td>
                         <td class="border px-4 py-2">
                             <button wire:click="edit({{ $blog->id }})"
                                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit

@@ -14,8 +14,9 @@ class BlogController extends Controller
     {
         //Get All blogs.
         $blogs=Blog::all();
+        $index = 1;
 
-        return view('welcome',compact('blogs'));
+        return view('welcome',compact('blogs', 'index'));
     }
 
 
