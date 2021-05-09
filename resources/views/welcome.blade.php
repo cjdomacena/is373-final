@@ -394,21 +394,7 @@
     </style>
 </head>
 <body class="antialiased">
-<div class="relative flex items-top justify-center h-14 bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-    @if (Route::has('login'))
-        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-            @auth
-                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
-            @else
-                <a href="{{ route('login') }}" class="text-sm text-white underline  hover:text-gray-700">Log in</a>
-
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="ml-4 text-sm text-white underline hover:text-gray-700">Register</a>
-                @endif
-            @endauth
-        </div>
-    @endif
-</div>
+@include("components.nav");
 
 
 {{--Hero Section--}}
@@ -476,8 +462,6 @@
             @foreach($blogs as $blog)
                 @if($blog->published)
             <div class="relative mt-8">
-
-{{--                    $index = 0;--}}
 
                         <dt>
                             <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
